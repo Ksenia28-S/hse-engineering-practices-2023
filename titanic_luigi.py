@@ -217,5 +217,5 @@ if __name__ == '__main__':
     luigi.build([pclass_task], local_scheduler="--scheduler-host localhost")
 
     # Predict 'Survived'
-    #survived_task = TrainModelsTask(data_path=data_path, cache_dir='luigi_cache/', predict_var='Survived', classifiers=classifiers, param_grids=param_grids)
+    #survived_task = TrainModelsTask(predict_var='Survived', cache_dir='luigi_cache/', classifiers=classifiers, param_grids=param_grids)
     #luigi.build([survived_task], local_scheduler="--scheduler-host localhost")
